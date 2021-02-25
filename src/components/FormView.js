@@ -37,13 +37,16 @@ class ReferralForm extends React.Component {
     let errorMsg = null;
     switch (name.toLowerCase()) {
       case "name":
-        errorMsg = "Please enter a valid Name";
+        //console.log("name");
+        errorMsg = "Name Required!";
         break;
       case "email":
-        errorMsg = "Please enter a valid email!";
+        // console.log("b email");
+        errorMsg = "Email Required!";
         break;
       case "phone":
-        errorMsg = "Please enter a valid Phone Number";
+        //console.log("phone");
+        errorMsg = "Number Required!";
         break;
       default:
         break;
@@ -123,6 +126,7 @@ class ReferralForm extends React.Component {
           if (tempPhone == "") {
             this.validate2(row, 2, "Phone");
           }
+
           return 0;
         });
         if (tempName !== "" && tempEmail !== "" && tempPhone !== "") {
