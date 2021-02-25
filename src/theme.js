@@ -1,3 +1,5 @@
+/* Updated by Vinay */
+
 import { createMuiTheme } from "@material-ui/core/styles";
 //import Exoregular from './fonts/exo-2-v7-latin-regular.woff2';
 //import Exobold from './fonts/exo-2-v7-latin-600.woff2';
