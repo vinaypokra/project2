@@ -32,7 +32,7 @@ class Banner extends Component {
               We’re India’s #1 Doctor-Approved Fitness Coaches
             </Typography>
             <Typography
-              variant="subtitle1"
+              variant="subtitle2"
               style={{ ...Styles.colorWhite, ...Styles.marginTop }}
             >
               Our fitness experts understand your health like no one else. Sign
@@ -68,9 +68,12 @@ class Banner extends Component {
           >
             <Grid item>
               <Typography style={{ ...Styles.colorWhite }} variant="h6">
-                Sign up with us to manage your diabetes better & take a step
-                towards a better life for{" "}
-                <span style={{ fontWeight: "bold" }}>free</span>
+                <span style={{ ...Styles.colorPrimary }}>Sign up with us </span>
+                to manage your
+                <span style={{ ...Styles.colorPrimary }}> Diabetes</span> better
+                & take a step towards a
+                <span style={{ ...Styles.colorPrimary }}> Better Life</span> for
+                <span style={{ fontWeight: "bold" }}> free</span>
               </Typography>
               <hr />
             </Grid>
