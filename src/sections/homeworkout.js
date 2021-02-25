@@ -36,7 +36,7 @@ class Homeworkout extends Component {
           direction="column"
         >
           <Typography
-            variant="h4"
+            variant="h3"
             style={{ ...Styles.colorWhite, marginBottom: Styles.spacing(3) }}
           >
             There’s a<span style={Styles.colorPrimary}> reason doctors </span>

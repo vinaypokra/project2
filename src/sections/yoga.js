@@ -28,7 +28,7 @@ class Yoga extends Component {
           justify="center"
           direction="column"
         >
-          <Typography variant="h4" style={Styles.colorWhite}>
+          <Typography variant="h3" style={Styles.colorWhite}>
             Why our <span style={Styles.colorPrimary}>Healthcare Plans </span>
             are effective?
           </Typography>

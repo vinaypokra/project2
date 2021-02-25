@@ -28,7 +28,10 @@ class Feelgood extends Component {
           direction="column"
         >
           <Grid item>
-            <Typography variant="h4" style={{ ...Styles.centerTxt }}>
+            <Typography
+              variant="h3"
+              style={{ ...Styles.leftTxt, marginBottom: Styles.spacing(3) }}
+            >
               Explore Our
               <span style={Styles.colorPrimary}>
                 {" "}
@@ -40,8 +43,8 @@ class Feelgood extends Component {
           </Grid>
           <Grid item container direction="column">
             <Typography
-              variant="h5"
-              style={{ ...Styles.colorGrey, ...Styles.centerTxt }}
+              variant="h4"
+              style={{ ...Styles.colorGrey, ...Styles.leftTxt }}
             >
               <br></br>
               <span style={{ ...Styles.colorGrey, ...Styles.italicTxt }}>
