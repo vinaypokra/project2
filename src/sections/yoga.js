@@ -23,7 +23,12 @@ class Yoga extends Component {
         <Grid
           item
           container
-          style={{ ...Styles.blackBG, ...Styles.padding10, ...Styles.blackBG }}
+          style={{
+            ...Styles.blackBG,
+            ...Styles.padding10,
+            ...Styles.blackBG,
+            ...Styles.feildRadius,
+          }}
           alignItems="flex-start"
           justify="center"
           direction="column"

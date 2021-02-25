@@ -22,7 +22,11 @@ class Feelgood extends Component {
         <Grid
           item
           container
-          style={{ ...Styles.blackBG, ...Styles.padding5 }}
+          style={{
+            ...Styles.blackBG,
+            ...Styles.padding5,
+            ...Styles.feildRadius,
+          }}
           alignItems="center"
           justify="center"
           direction="column"

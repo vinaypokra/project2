@@ -30,6 +30,7 @@ class Homeworkout extends Component {
             ...Styles.blackBG,
             ...Styles.padding5,
             ...Styles.marginBottom,
+            ...Styles.feildRadius,
           }}
           alignItems="flex-start"
           justify="center"

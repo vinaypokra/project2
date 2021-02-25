@@ -60,7 +60,11 @@ class Banner extends Component {
           <Grid
             item
             container
-            style={{ ...Styles.blackBG, ...Styles.padding5 }}
+            style={{
+              ...Styles.blackBG,
+              ...Styles.padding5,
+              ...Styles.feildRadius,
+            }}
           >
             <Grid item>
               <Typography style={{ ...Styles.colorWhite }} variant="h6">
