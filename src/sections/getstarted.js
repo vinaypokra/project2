@@ -1,3 +1,4 @@
+/* hi */
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import Styles from "../app-style.js";
@@ -18,7 +19,7 @@ class GetStarted extends Component {
       >
         <Grid item>
           <Typography
-            variant="h3"
+            variant="h2"
             style={{ ...Styles.colorWhite, ...{ textAlign: "center" } }}
           >
             Join the community of like minded people
@@ -32,7 +33,10 @@ class GetStarted extends Component {
           </Typography>
           <hr />
         </Grid>
-        <Grid item style={{ ...Styles.padding5 }}>
+        <Grid
+          item
+          style={{ ...Styles.padding5, marginBottom: Styles.spacing(8) }}
+        >
           <Signupform />
         </Grid>
       </Grid>
