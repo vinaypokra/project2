@@ -33,6 +33,30 @@ class ReferralForm extends React.Component {
     values[row][col].value = value;
     this.setState({ inputFeildRows: values });
   };
+  validate2 = (row, col, name) => {
+    let errorMsg = null;
+    switch (name.toLowerCase()) {
+      case "name":
+        errorMsg = "Please enter a valid Name";
+        break;
+      case "email":
+        errorMsg = "Please enter a valid email!";
+        break;
+      case "phone":
+        errorMsg = "Please enter a valid Phone Number";
+        break;
+      default:
+        break;
+    }
+    if (errorMsg != null) {
+      hasError = true;
+    } else {
+      hasError = false;
+    }
+    const values = _.cloneDeep(this.state.inputFeildRows);
+    values[row][col].error = errorMsg;
+    this.setState({ inputFeildRows: values });
+  };
   validate = (row, col, e) => {
     const emailReg = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/g;
     const nameReg = /^([a-zA-Z0-9]+|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{1,}|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{3,}\s{1}[a-zA-Z0-9]{1,})$/g;
@@ -91,16 +115,13 @@ class ReferralForm extends React.Component {
           if (colData.displayname === "Email") tempEmail = colData.value;
           if (colData.displayname === "Phone") tempPhone = colData.value;
           if (tempName == "") {
-            values[row][col].error = "This field is required";
-            this.setState({ inputFeildRows: values });
+            this.validate2(row, 0, "Name");
           }
           if (tempEmail == "") {
-            values[row][col].error = "This field is required";
-            this.setState({ inputFeildRows: values });
+            this.validate2(row, 1, "Email");
           }
           if (tempPhone == "") {
-            values[row][col].error = "This field is required";
-            this.setState({ inputFeildRows: values });
+            this.validate2(row, 2, "Phone");
           }
           return 0;
         });
