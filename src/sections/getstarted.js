@@ -35,10 +35,7 @@ class GetStarted extends Component {
         </Grid>
         <Grid
           item
-          style={{
-            ...Styles.padding5,
-            marginBottom: Styles.spacing(8),
-          }}
+          style={{ ...Styles.padding5, marginBottom: Styles.spacing(8) }}
         >
           <Signupform />
         </Grid>
