@@ -37,7 +37,6 @@ class GetStarted extends Component {
           item
           style={{
             ...Styles.padding5,
-            ...Styles.colorGrey,
             marginBottom: Styles.spacing(8),
           }}
         >
