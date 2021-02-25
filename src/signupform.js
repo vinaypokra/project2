@@ -177,7 +177,12 @@ export default (props) => {
               <label htmlFor="email">
                 <Typography style={Styles.whiteColor}>Full Name</Typography>
               </label>
-              <Field name="name" type="text" validate={validateName} />
+              <Field
+                name="name"
+                type="text"
+                validate={validateName}
+                style={{ ...Styles.feildRadius }}
+              />
               {touched.name && errors.name && (
                 <div style={Styles.err}>{errors.name}</div>
               )}
@@ -186,7 +191,12 @@ export default (props) => {
               <label htmlFor="email">
                 <Typography style={Styles.whiteColor}>Email</Typography>
               </label>
-              <Field name="email" type="text" validate={validateEmail} />
+              <Field
+                name="email"
+                type="text"
+                validate={validateEmail}
+                style={{ ...Styles.feildRadius }}
+              />
               {touched.email && errors.email && (
                 <Typography style={Styles.err} variant="body2">
                   {errors.email}
@@ -208,6 +218,7 @@ export default (props) => {
                     name="country"
                     type="number"
                     validate={validateCountry}
+                    style={{ ...Styles.feildRadius }}
                   />
                 </div>
                 <div style={Styles.special}>
@@ -220,6 +231,7 @@ export default (props) => {
                     name="mobile"
                     type="number"
                     validate={validateMobile}
+                    style={{ ...Styles.feildRadius }}
                   />
                 </div>
               </div>
@@ -234,7 +246,12 @@ export default (props) => {
               <label htmlFor="age">
                 <Typography style={Styles.whiteColor}>Age</Typography>
               </label>
-              <Field name="age" type="number" validate={validateAge} />
+              <Field
+                name="age"
+                type="number"
+                validate={validateAge}
+                style={{ ...Styles.feildRadius }}
+              />
               {touched.age && errors.age && (
                 <Typography style={Styles.err} variant="body2">
                   {errors.age}
