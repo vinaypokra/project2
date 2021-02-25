@@ -1,4 +1,3 @@
-/* Signup from */
 import React, { useState } from "react";
 import { Form, Field, Formik } from "formik";
 import Button from "@material-ui/core/Button";
