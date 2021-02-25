@@ -19,7 +19,7 @@ const ColorButton = withStyles((theme) => ({
 
 const handleScroll = () => {
   window.scroll({
-    top: 600,
+    top: 750,
     left: 0,
     behavior: "smooth",
   });
@@ -122,6 +122,10 @@ export default {
   },
   imgWidth: {
     width: "100%",
+  },
+
+  italicTxt: {
+    fontStyle: "italic",
   },
   header: {
     position: "fixed",

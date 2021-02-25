@@ -33,11 +33,17 @@ class Yoga extends Component {
           justify="center"
           direction="column"
         >
-          <Typography variant="h3" style={Styles.colorWhite}>
+          <Typography
+            variant="h3"
+            style={{ ...Styles.colorWhite, marginBottom: Styles.spacing(3) }}
+          >
             Why our <span style={Styles.colorPrimary}>Healthcare Plans </span>
             are effective?
           </Typography>
-          <Typography variant="h5" style={Styles.colorGrey}>
+          <Typography
+            variant="h5"
+            style={{ ...Styles.colorGrey, ...Styles.italicTxt }}
+          >
             <ul>
               <li>
                 A 1-to-1 coach who will completely understand your lifestyle and

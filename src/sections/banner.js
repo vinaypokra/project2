@@ -67,7 +67,7 @@ class Banner extends Component {
             }}
           >
             <Grid item>
-              <Typography style={{ ...Styles.colorWhite }} variant="h6">
+              <Typography style={{ ...Styles.colorWhite }} variant="h5">
                 <span style={{ ...Styles.colorPrimary }}>Sign up with us </span>
                 to manage your
                 <span style={{ ...Styles.colorPrimary }}> Diabetes</span> better
