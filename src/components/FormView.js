@@ -91,15 +91,15 @@ class ReferralForm extends React.Component {
           if (colData.displayname === "Email") tempEmail = colData.value;
           if (colData.displayname === "Phone") tempPhone = colData.value;
           if (tempName == "") {
-            values[row][col].error = "Please Enter a Name";
+            values[row][col].error = "This field is required";
             this.setState({ inputFeildRows: values });
           }
           if (tempEmail == "") {
-            values[row][col].error = "Please Enter a Email";
+            values[row][col].error = "This field is required";
             this.setState({ inputFeildRows: values });
           }
           if (tempPhone == "") {
-            values[row][col].error = "Please Enter a Phone";
+            values[row][col].error = "This field is required";
             this.setState({ inputFeildRows: values });
           }
           return 0;
@@ -117,7 +117,6 @@ class ReferralForm extends React.Component {
           console.log("Empty Field found");
           return 0;
         }
-
         return 0;
       });
       axios({
