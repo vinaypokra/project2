@@ -90,16 +90,34 @@ class ReferralForm extends React.Component {
           if (colData.displayname === "Name") tempName = colData.value;
           if (colData.displayname === "Email") tempEmail = colData.value;
           if (colData.displayname === "Phone") tempPhone = colData.value;
+          if (tempName == "") {
+            values[row][col].error = "Please Enter a Name";
+            this.setState({ inputFeildRows: values });
+          }
+          if (tempEmail == "") {
+            values[row][col].error = "Please Enter a Email";
+            this.setState({ inputFeildRows: values });
+          }
+          if (tempPhone == "") {
+            values[row][col].error = "Please Enter a Phone";
+            this.setState({ inputFeildRows: values });
+          }
           return 0;
         });
-        postArray.push({
-          name: tempName,
-          email: tempEmail,
-          mobile: tempPhone,
-          city: "",
-          ip: "",
-          mailStatus: null,
-        });
+        if (tempName !== "" && tempEmail !== "" && tempPhone !== "") {
+          postArray.push({
+            name: tempName,
+            email: tempEmail,
+            mobile: tempPhone,
+            city: "",
+            ip: "",
+            mailStatus: null,
+          });
+        } else {
+          console.log("Empty Field found");
+          return 0;
+        }
+
         return 0;
       });
       axios({
@@ -110,7 +128,7 @@ class ReferralForm extends React.Component {
           // affiliate_lname: this.props.affiliate_name.split(' ')[1],
           // affiliate_email: this.props.affiliate_email,
           // affiliate_phone: this.props.affiliate_mobile,//"+919821354464",
-          affiliate_id: this.props.affiliate_id, // ((this.props.affiliate_id===null)?1:this.props.affiliate_id),//this.props.affiliate_id,
+          affiliate_id: this.props.affiliate_id, //((this.props.affiliate_id===null)?1:this.props.affiliate_id),//,
           campaign_id: this.props.campaign_id, //((this.props.campaign_id===null)?1:this.props.campaign_id),//comment before comming
           referrals: [...postArray],
         },
