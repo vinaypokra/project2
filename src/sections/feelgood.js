@@ -28,7 +28,7 @@ class Feelgood extends Component {
           direction="column"
         >
           <Grid item>
-            <Typography variant="h2" style={{ ...Styles.centerTxt }}>
+            <Typography variant="h4" style={{ ...Styles.centerTxt }}>
               Explore Our
               <span style={Styles.colorPrimary}>
                 {" "}
@@ -38,10 +38,9 @@ class Feelgood extends Component {
               About Your Health & Fitness Levels.
             </Typography>
           </Grid>
-          <Grid item container direction="column"></Grid>
-          <Grid item xs={10} style={{ margin: "auto" }}>
+          <Grid item container direction="column">
             <Typography
-              variant="h4"
+              variant="h5"
               style={{ ...Styles.colorGrey, ...Styles.centerTxt }}
             >
               <br></br>

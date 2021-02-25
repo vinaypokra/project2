@@ -28,10 +28,11 @@ class Yoga extends Component {
           justify="center"
           direction="column"
         >
-          <Typography variant="h1" style={Styles.colorPrimary}>
-            Why our Healthcare Plans are effective?
+          <Typography variant="h4" style={Styles.colorWhite}>
+            Why our <span style={Styles.colorPrimary}>Healthcare Plans </span>
+            are effective?
           </Typography>
-          <Typography variant="h2" style={Styles.colorGrey}>
+          <Typography variant="h5" style={Styles.colorGrey}>
             <ul>
               <li>
                 A 1-to-1 coach who will completely understand your lifestyle and

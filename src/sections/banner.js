@@ -63,7 +63,7 @@ class Banner extends Component {
             style={{ ...Styles.blackBG, ...Styles.padding5 }}
           >
             <Grid item>
-              <Typography style={{ ...Styles.colorWhite }} variant="subtitle1">
+              <Typography style={{ ...Styles.colorWhite }} variant="h6">
                 Sign up with us to manage your diabetes better & take a step
                 towards a better life for{" "}
                 <span style={{ fontWeight: "bold" }}>free</span>

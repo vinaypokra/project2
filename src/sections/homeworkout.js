@@ -36,16 +36,16 @@ class Homeworkout extends Component {
           direction="column"
         >
           <Typography
-            variant="h1"
-            style={{ ...Styles.colorPrimary, ...Styles.marginTop }}
+            variant="h4"
+            style={{ ...Styles.colorWhite, marginBottom: Styles.spacing(3) }}
           >
-            There’s a reason doctors recommend us
+            There’s a<span style={Styles.colorPrimary}> reason doctors </span>
+            recommend us
           </Typography>
           <Typography
-            variant="h6"
+            variant="h5"
             style={{ ...Styles.colorGrey, ...Styles.italicTxt }}
           >
-            <br></br>
             "18 years of my life went by taking insulin shots. Enrolling in the
             GetSetGo Fitness Diabetes Care package was by far the best
             investment I made for my health. With the help of the diet and
