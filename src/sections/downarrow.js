@@ -8,19 +8,15 @@ export default function () {
       <div
         style={{
           ...Styles.highZ,
-          ...{ position: "absolute", bottom: "110px" },
+          position: "absolute",
+          bottom: "70px",
+          textAlign: "center",
         }}
       >
         <Button onClick={Styles.handleScroll} style={{ ...Styles.colorWhite }}>
           Scroll Down
         </Button>
-      </div>
-      <div
-        style={{
-          ...Styles.highZ,
-          ...{ position: "absolute", bottom: "85px" },
-        }}
-      >
+        <br></br>
         <Button onClick={Styles.handleScroll} style={{ ...Styles.colorWhite }}>
           <span
             className="material-icons"
