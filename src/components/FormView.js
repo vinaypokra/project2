@@ -87,17 +87,17 @@ class ReferralForm extends React.Component {
     values.map((rowData, row) => {
       rowData.map((colData, col) => {
         if (colData.displayname === "Name" && colData.value === "") {
-          values[row][col].error = "Ops! Name Required!";
+          values[row][col].error = "Uh oh! It's a required field";
           this.setState({ inputFeildRows: values });
           hasError = true;
         }
         if (colData.displayname === "Email" && colData.value === "") {
-          values[row][col].error = "Ops! Email Required!";
+          values[row][col].error = "Uh oh! It's a required field";
           this.setState({ inputFeildRows: values });
           hasError = true;
         }
         if (colData.displayname === "Phone" && colData.value === "") {
-          values[row][col].error = "Ops! Phone Required!";
+          values[row][col].error = "Uh oh! It's a required field";
           this.setState({ inputFeildRows: values });
           hasError = true;
         }
@@ -214,10 +214,10 @@ class ReferralForm extends React.Component {
                         size="small"
                         name={inputCol.displayname}
                         value={inputCol.value}
-                        error={inputCol.error ? true : false}
+                        // error={inputCol.error ? true : false}
                         id="filled"
                         variant="filled"
-                        label={inputCol.error ? inputCol.error : ""}
+                        //label={inputCol.error ? inputCol.error : ""}
                         onChange={(e) => {
                           this.handleChangeInput(row, col, e);
                           this.setState({ btn: false });
@@ -225,6 +225,9 @@ class ReferralForm extends React.Component {
                         onBlur={(e) => this.validate(row, col, e)}
                         style={inputCol.style ? inputCol.style : null}
                       />
+                      {inputCol.error && (
+                        <div style={{ ...Styles.err }}>{inputCol.error}</div>
+                      )}
                     </Grid>
                   ))}
                   <IconButton
