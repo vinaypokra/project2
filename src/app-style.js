@@ -136,7 +136,7 @@ export default {
     zIndex: 20000,
   },
   footer: {
-    padding: "20px",
+    padding: "0.3rem",
     background: "#000",
     textAlign: "center",
     position: "fixed",
@@ -164,5 +164,5 @@ export default {
   countryContainer: { display: "inline-block", width: "15%" },
   mobileContainer: { display: "inline-block", width: "75%" },
   ordersummarySuccessMsg: { marginBottom: "60px", marginTop: "100px" },
-  footerfont: { fontSize: "0.9rem" },
+  footerfont: { fontSize: "0.6rem" },
 };

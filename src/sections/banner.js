@@ -6,6 +6,8 @@ import { retrievePathMobile, docHt } from "../services";
 import Signupform from "../signupform";
 import PreloadImage from "../helpers/preloadimg";
 import Arrow from "./downarrow";
+import "../App.css";
+
 class Banner extends Component {
   render() {
     return (
@@ -27,7 +29,13 @@ class Banner extends Component {
             src={`${retrievePathMobile()}banner.jpg`}
             style={Styles.bgImg}
           />
-          <Grid item container alignItems="center" justify="center">
+          <Grid
+            id="homePageHeading"
+            item
+            container
+            alignItems="center"
+            justify="center"
+          >
             <Typography variant="h1" style={{ ...Styles.colorWhite }}>
               We’re India’s #1 Doctor-Approved Fitness Coaches
             </Typography>

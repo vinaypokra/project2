@@ -94,3 +94,12 @@ ul > li:nth-child(even) {
 #filled {
   border-radius: 5px;
 }
+@media screen and (max-width: 360px) {
+  #homePageHeading h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  #homePageHeading h6 {
+    font-size: 0.8rem;
+  }
+}
