@@ -33,33 +33,7 @@ class ReferralForm extends React.Component {
     values[row][col].value = value;
     this.setState({ inputFeildRows: values });
   };
-  validate2 = (row, col, name) => {
-    let errorMsg = null;
-    switch (name.toLowerCase()) {
-      case "name":
-        //console.log("name");
-        errorMsg = "Name Required!";
-        break;
-      case "email":
-        // console.log("b email");
-        errorMsg = "Email Required!";
-        break;
-      case "phone":
-        //console.log("phone");
-        errorMsg = "Number Required!";
-        break;
-      default:
-        break;
-    }
-    if (errorMsg != null) {
-      hasError = true;
-    } else {
-      hasError = false;
-    }
-    const values = _.cloneDeep(this.state.inputFeildRows);
-    values[row][col].error = errorMsg;
-    this.setState({ inputFeildRows: values });
-  };
+
   validate = (row, col, e) => {
     const emailReg = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/g;
     const nameReg = /^([a-zA-Z0-9]+|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{1,}|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{3,}\s{1}[a-zA-Z0-9]{1,})$/g;
@@ -110,6 +84,25 @@ class ReferralForm extends React.Component {
     //let campaign_id=1//this.props.campaign_id;
     let postArray = [];
     const values = _.cloneDeep(this.state.inputFeildRows);
+    values.map((rowData, row) => {
+      rowData.map((colData, col) => {
+        if (colData.displayname === "Name" && colData.value === "") {
+          values[row][col].error = "Ops! Name Required!";
+          this.setState({ inputFeildRows: values });
+          hasError = true;
+        }
+        if (colData.displayname === "Email" && colData.value === "") {
+          values[row][col].error = "Ops! Email Required!";
+          this.setState({ inputFeildRows: values });
+          hasError = true;
+        }
+        if (colData.displayname === "Phone" && colData.value === "") {
+          values[row][col].error = "Ops! Phone Required!";
+          this.setState({ inputFeildRows: values });
+          hasError = true;
+        }
+      });
+    });
     let tempName, tempEmail, tempPhone;
     if (hasError === false) {
       values.map((rowData, row) => {
@@ -117,31 +110,19 @@ class ReferralForm extends React.Component {
           if (colData.displayname === "Name") tempName = colData.value;
           if (colData.displayname === "Email") tempEmail = colData.value;
           if (colData.displayname === "Phone") tempPhone = colData.value;
-          if (tempName == "") {
-            this.validate2(row, 0, "Name");
-          }
-          if (tempEmail == "") {
-            this.validate2(row, 1, "Email");
-          }
-          if (tempPhone == "") {
-            this.validate2(row, 2, "Phone");
-          }
 
           return 0;
         });
-        if (tempName !== "" && tempEmail !== "" && tempPhone !== "") {
-          postArray.push({
-            name: tempName,
-            email: tempEmail,
-            mobile: tempPhone,
-            city: "",
-            ip: "",
-            mailStatus: null,
-          });
-        } else {
-          console.log("Empty Field found");
-          return 0;
-        }
+
+        postArray.push({
+          name: tempName,
+          email: tempEmail,
+          mobile: tempPhone,
+          city: "",
+          ip: "",
+          mailStatus: null,
+        });
+
         return 0;
       });
       axios({
