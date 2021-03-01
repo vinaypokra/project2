@@ -78,8 +78,12 @@ const theme = createMuiTheme({
     secondary: {
       main: colors.secondary,
     },
+    action: {
+      disabled: colors.disableButtonColor,
+    },
   },
   spacing: (value) => `${value * 8}px`,
+
   typography: {
     //fontFamily: 'Exo, Arial',
     fontFamily: "Poppins,Arial",

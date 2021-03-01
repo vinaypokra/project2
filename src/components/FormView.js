@@ -260,6 +260,7 @@ class ReferralForm extends React.Component {
                 color="primary"
                 disabled={this.state.submitButtonEnable}
                 type="submit"
+
                 // onClick={(e) => {
                 //   this.handleSubmit(e);
                 // }}
