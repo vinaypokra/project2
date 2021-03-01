@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import Styles from "../app-style.js";
 import { Typography } from "@material-ui/core";
-
+import customTxt from "./customTxt.json";
 class Yoga extends Component {
   render() {
     return (
@@ -37,25 +37,24 @@ class Yoga extends Component {
             variant="h3"
             style={{ ...Styles.colorWhite, marginBottom: Styles.spacing(3) }}
           >
-            Why our <span style={Styles.colorPrimary}>Healthcare Plans </span>
-            are effective?
+            {customTxt.yogaPageTxt.mainHeading[0]}
+            <span style={Styles.colorPrimary}>
+              {customTxt.yogaPageTxt.mainHeading[1]}{" "}
+            </span>
+            {customTxt.yogaPageTxt.mainHeading[2]}
           </Typography>
           <Typography
             variant="h5"
             style={{ ...Styles.colorGrey, ...Styles.italicTxt }}
           >
             <ul>
-              <li>
-                A 1-to-1 coach who will completely understand your lifestyle and
-                health concerns.
-              </li>
-              <li>
-                Easy-to-follow nutrition and workout plan, that is in-sync with
-                your treatment.
-              </li>
-              <li>Frequent tweaking of diet plan till you see results.</li>
-              <li>Regular sharing of progress update with your doctor.</li>
-              <li>Unlimited coach support via WhatsApp & Call.</li>
+              {customTxt.yogaPageTxt.contentList.map((val) => {
+                return (
+                  <>
+                    <li>{val}</li>
+                  </>
+                );
+              })}
             </ul>
           </Typography>
         </Grid>

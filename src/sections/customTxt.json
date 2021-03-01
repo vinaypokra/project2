@@ -1,0 +1,35 @@
+{
+  "bannerPageTxt": {
+    "mainHeading": "We’re India’s #1 Doctor-Approved Fitness Coaches.",
+    "subHeading": "Our fitness experts understand your health like no one else. Sign up with us to manage your diabetes better & take a step towards a better life."
+  },
+  "feelgoodPageTxt": {
+    "mainHeading": [
+      "Explore Our ",
+      "Healthcare Fitness Plans ",
+      "or Have ",
+      "A Wake-Up Call ",
+      "About Your Health & Fitness Levels."
+    ],
+    "subHeading": "It’s never too late! Our fitness experts are here to help and understand your health like no one else."
+  },
+  "homeworkoutPageTxt": {
+    "mainHeading": ["There’s a ", "reason doctors ", "recommend us"],
+    "subHeading": [
+      "18 years of my life went by taking insulin shots. Enrolling in the GetSetGo Fitness Diabetes Care package was by far the best investment I made for my health. With the help of the diet and exercise plan given by the GetSetGo team, I managed to normalize my condition. Today I am fit in my late 40s feeling like I'm in my late 20s.",
+      "Ashok Goyal,",
+      "Diabetes Care Client",
+      "Hyderabad"
+    ]
+  },
+  "yogaPageTxt": {
+    "mainHeading": ["Why our ", "Healthcare Plans ", "are effective?"],
+    "contentList": [
+      "A 1-to-1 coach who will completely understand your lifestyle and health concerns.",
+      "Easy-to-follow nutrition and workout plan, that is in-sync with your treatment.",
+      "Frequent tweaking of diet plan till you see results.",
+      "Regular sharing of progress update with your doctor.",
+      "Unlimited coach support via WhatsApp & Call."
+    ]
+  }
+}

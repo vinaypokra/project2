@@ -4,6 +4,7 @@ import Styles from "../app-style.js";
 import { Typography } from "@material-ui/core";
 import { colors, retrievePath } from "../services";
 import PreloadImage from "../helpers/preloadimg";
+import customTxt from "./customTxt.json";
 class Homeworkout extends Component {
   constructor(props) {
     super(props);
@@ -40,22 +41,24 @@ class Homeworkout extends Component {
             variant="h3"
             style={{ ...Styles.colorWhite, marginBottom: Styles.spacing(3) }}
           >
-            There’s a<span style={Styles.colorPrimary}> reason doctors </span>
-            recommend us
+            {customTxt.homeworkoutPageTxt.mainHeading[0]}
+            <span style={Styles.colorPrimary}>
+              {customTxt.homeworkoutPageTxt.mainHeading[1]}
+            </span>
+            {customTxt.homeworkoutPageTxt.mainHeading[2]}
           </Typography>
           <Typography
             variant="h5"
             style={{ ...Styles.colorGrey, ...Styles.italicTxt }}
           >
-            "18 years of my life went by taking insulin shots. Enrolling in the
-            GetSetGo Fitness Diabetes Care package was by far the best
-            investment I made for my health. With the help of the diet and
-            exercise plan given by the GetSetGo team, I managed to normalize my
-            condition. Today I am fit in my late 40s feeling like I'm in my late
-            20s." <br></br>
+            {customTxt.homeworkoutPageTxt.subHeading[0]} <br></br>
             <br></br>
-            <span style={Styles.boldTxt}>Ashok Goyal,</span> <br></br>
-            <b>Diabetes Care Client</b> <br></br> <b>Hyderabad</b>
+            <span style={Styles.boldTxt}>
+              {customTxt.homeworkoutPageTxt.subHeading[1]}
+            </span>
+            <br></br>
+            <b>{customTxt.homeworkoutPageTxt.subHeading[2]}</b> <br></br>
+            <b>{customTxt.homeworkoutPageTxt.subHeading[3]}</b>
           </Typography>
         </Grid>
         <Grid

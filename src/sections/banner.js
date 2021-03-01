@@ -7,7 +7,7 @@ import Signupform from "../signupform";
 import PreloadImage from "../helpers/preloadimg";
 import Arrow from "./downarrow";
 import "../App.css";
-
+import customTxt from "./customTxt.json";
 class Banner extends Component {
   render() {
     return (
@@ -37,15 +37,13 @@ class Banner extends Component {
             justify="center"
           >
             <Typography variant="h1" style={{ ...Styles.colorWhite }}>
-              We’re India’s #1 Doctor-Approved Fitness Coaches
+              {customTxt.bannerPageTxt.mainHeading}
             </Typography>
             <Typography
               variant="subtitle2"
               style={{ ...Styles.colorWhite, ...Styles.marginTop }}
             >
-              Our fitness experts understand your health like no one else. Sign
-              up with us to manage your diabetes better & take a step towards a
-              better life.
+              {customTxt.bannerPageTxt.subHeading}
             </Typography>
           </Grid>
           <Arrow />

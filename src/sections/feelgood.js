@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Styles from "../app-style.js";
 import { Typography } from "@material-ui/core";
 import { colors } from "../services";
-
+import customTxt from "./customTxt.json";
 class Feelgood extends Component {
   render() {
     return (
@@ -36,13 +36,15 @@ class Feelgood extends Component {
               variant="h3"
               style={{ ...Styles.leftTxt, marginBottom: Styles.spacing(3) }}
             >
-              Explore Our
+              {customTxt.feelgoodPageTxt.mainHeading[0]}
               <span style={Styles.colorPrimary}>
-                {" "}
-                Healthcare Fitness Plans{" "}
+                {customTxt.feelgoodPageTxt.mainHeading[1]}
               </span>
-              or Have <span style={Styles.colorPrimary}>A Wake-Up Call </span>
-              About Your Health & Fitness Levels.
+              {customTxt.feelgoodPageTxt.mainHeading[2]}
+              <span style={Styles.colorPrimary}>
+                {customTxt.feelgoodPageTxt.mainHeading[3]}{" "}
+              </span>
+              {customTxt.feelgoodPageTxt.mainHeading[4]}
             </Typography>
           </Grid>
           <Grid item container direction="column">
@@ -52,8 +54,7 @@ class Feelgood extends Component {
             >
               <br></br>
               <span style={{ ...Styles.colorGrey, ...Styles.italicTxt }}>
-                It’s never too late! Our fitness experts are here to help and
-                understand your health like no one else.
+                {customTxt.feelgoodPageTxt.subHeading}
               </span>
             </Typography>
           </Grid>
