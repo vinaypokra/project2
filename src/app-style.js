@@ -43,6 +43,9 @@ export default {
   colorGrey: {
     color: colors.grey,
   },
+  colorTransparent: {
+    background: colors.transparent,
+  },
   blackBG: {
     background: "#000",
   },
