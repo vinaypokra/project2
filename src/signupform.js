@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Field, Formik } from "formik";
 import Button from "@material-ui/core/Button";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import Styles from "./app-style";
 import { callAPI, getURL, get, set } from "./services";
 import emailTemplates from "./emailTemplate.json";
@@ -125,37 +125,37 @@ export default (props) => {
   };
   if (err) {
     return (
-      <div style={{ padding: "20px 0" }}>
+      <Grid item style={{ padding: "20px 0" }}>
         <Typography
           variant="subtitle2"
           style={{ ...Styles.colorWhite, ...Styles.centerTxt }}
         >
           Uh oh! We ran into an unexpected error. Please reload and try again.
         </Typography>
-      </div>
+      </Grid>
     );
   }
   if (!err && formSubmitting && !sendingEmail)
     return (
-      <div style={{ padding: "20px 0" }}>
+      <Grid item style={{ padding: "20px 0" }}>
         <Typography
           variant="subtitle2"
           style={{ ...Styles.colorWhite, ...Styles.centerTxt }}
         >
           Submitting the form ...
         </Typography>
-      </div>
+      </Grid>
     );
   if (!err && !formSubmitting && sendingEmail)
     return (
-      <div style={{ padding: "20px 0" }}>
+      <Grid item style={{ padding: "20px 0" }}>
         <Typography
           variant="subtitle2"
           style={{ ...Styles.colorWhite, ...Styles.centerTxt }}
         >
           Dropping an email confirmation ...
         </Typography>
-      </div>
+      </Grid>
     );
   if (!(err || formSubmitting || sendingEmail)) {
     return (
@@ -173,7 +173,7 @@ export default (props) => {
       >
         {({ errors, touched, isValidating }) => (
           <Form>
-            <div style={Styles.formFieldContainer}>
+            <Grid item style={Styles.formFieldContainer}>
               <label htmlFor="email">
                 <Typography style={Styles.whiteColor}>Full Name</Typography>
               </label>
@@ -184,10 +184,12 @@ export default (props) => {
                 style={{ ...Styles.feildRadius }}
               />
               {touched.name && errors.name && (
-                <div style={Styles.err}>{errors.name}</div>
+                <Grid item style={Styles.err}>
+                  {errors.name}
+                </Grid>
               )}
-            </div>
-            <div style={Styles.formFieldContainer}>
+            </Grid>
+            <Grid item style={Styles.formFieldContainer}>
               <label htmlFor="email">
                 <Typography style={Styles.whiteColor}>Email</Typography>
               </label>
@@ -202,47 +204,47 @@ export default (props) => {
                   {errors.email}
                 </Typography>
               )}
-            </div>
-            <div style={Styles.formFieldContainer}>
+            </Grid>
+            <Grid item container style={Styles.formFieldContainer}>
               <label htmlFor="mobile">
                 <Typography style={Styles.whiteColor}>Mobile</Typography>
               </label>
-              <div>
-                <div style={Styles.special}>
+              <Grid item container>
+                <Grid item style={Styles.special}>
                   <Typography variant="body2" style={Styles.whiteColor}>
                     +
                   </Typography>
-                </div>
-                <div style={Styles.countryContainer}>
+                </Grid>
+                <Grid item style={Styles.countryContainer}>
                   <Field
                     name="country"
                     type="number"
                     validate={validateCountry}
                     style={{ ...Styles.feildRadius }}
                   />
-                </div>
-                <div style={Styles.special}>
+                </Grid>
+                <Grid item style={Styles.special}>
                   <Typography variant="body2" style={Styles.whiteColor}>
                     -
                   </Typography>
-                </div>
-                <div style={Styles.mobileContainer}>
+                </Grid>
+                <Grid item style={Styles.mobileContainer}>
                   <Field
                     name="mobile"
                     type="number"
                     validate={validateMobile}
                     style={{ ...Styles.feildRadius }}
                   />
-                </div>
-              </div>
+                </Grid>
+              </Grid>
               {((touched.mobile && errors.mobile) ||
                 (touched.country && errors.country)) && (
-                <div style={Styles.err} variant="body2">
+                <Grid item style={Styles.err} variant="body2">
                   {errors.mobile} {errors.country}
-                </div>
+                </Grid>
               )}
-            </div>
-            <div style={Styles.formFieldContainer}>
+            </Grid>
+            <Grid item style={Styles.formFieldContainer}>
               <label htmlFor="age">
                 <Typography style={Styles.whiteColor}>Age</Typography>
               </label>
@@ -257,7 +259,7 @@ export default (props) => {
                   {errors.age}
                 </Typography>
               )}
-            </div>
+            </Grid>
             <Styles.ColorButton
               style={Styles.deafultButton}
               type="submit"

@@ -273,7 +273,7 @@ class Package extends Component {
                           >
                             {desc[index]}
                           </Typography>
-                          <div>
+                          <Grid item container>
                             <Styles.ColorButton
                               variant="contained"
                               color="primary"
@@ -287,7 +287,7 @@ class Package extends Component {
                                 {!bored ? "Please wait ..." : "Buy now"}
                               </Typography>
                             </Styles.ColorButton>
-                          </div>
+                          </Grid>
                         </Grid>
                       );
                     })
@@ -298,22 +298,22 @@ class Package extends Component {
                                 <Typography variant="subtitle1" style={{...Styles.colorWhite, ...Styles.marginTop}}>2 People</Typography>
                                 <Typography style={{...Styles.colorGrey, ...Styles.marginTop}}>₹ 3000 per person per month</Typography>
                                 <Typography variant="subtitle2" style={{...Styles.colorWhite, ...Styles.marginTop, ...{minHeight: '120px'}}}></Typography>
-                                <div>
+                                <Grid item container>
                                     <Button variant="contained" color="primary">
                                         <Typography variant="subtitle1" style={Styles.colorWhite}>Buy now</Typography>
                                     </Button>
-                                </div>
+                                </Grid item container>
                             </Grid>
                             <Grid item xs={4} style={{...Styles.centerTxt, ...{padding: '0 50px'}}}>
                                 <PreloadImage src={boredFamily} alt="Simple, macro-calculated recipes" style={{width: '100%'}}/>
                                 <Typography variant="subtitle1" style={{...Styles.colorWhite, ...Styles.marginTop}}>4 People</Typography>
                                 <Typography style={{...Styles.colorGrey, ...Styles.marginTop}}>₹ 2500 per person per month</Typography>
                                 <Typography variant="subtitle2" style={{...Styles.colorWhite, ...Styles.marginTop, ...{minHeight: '120px'}}}></Typography>
-                                <div>
+                                <Grid item container>
                                     <Button variant="contained" color="primary">
                                         <Typography variant="subtitle1" style={Styles.colorWhite}>Buy now</Typography>
                                     </Button>
-                                </div>
+                                </Grid item container>
                             </Grid> */}
               </Grid>
             )}

@@ -1,11 +1,16 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import Styles from "../app-style";
 import { colors } from "../services";
 export default function () {
   return (
     <React.Fragment>
-      <div
+      <Grid
+        item
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
         style={{
           ...Styles.highZ,
           position: "absolute",
@@ -13,19 +18,34 @@ export default function () {
           textAlign: "center",
         }}
       >
-        <Button onClick={Styles.handleScroll} style={{ ...Styles.colorWhite }}>
-          Scroll Down
-        </Button>
-        <br></br>
-        <Button onClick={Styles.handleScroll} style={{ ...Styles.colorWhite }}>
-          <span
-            className="material-icons"
-            style={{ fontSize: "4rem", color: colors.secondary, lineHeight: 0 }}
+        {" "}
+        <Grid item>
+          <Button
+            onClick={Styles.handleScroll}
+            style={{ ...Styles.colorWhite }}
           >
-            keyboard_arrow_down
-          </span>
-        </Button>
-      </div>
+            Scroll Down
+          </Button>
+          <br></br>
+        </Grid>
+        <Grid item>
+          <Button
+            onClick={Styles.handleScroll}
+            style={{ ...Styles.colorWhite }}
+          >
+            <span
+              className="material-icons"
+              style={{
+                fontSize: "4rem",
+                color: colors.secondary,
+                lineHeight: 0,
+              }}
+            >
+              keyboard_arrow_down
+            </span>
+          </Button>
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 }
