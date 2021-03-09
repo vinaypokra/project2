@@ -19,7 +19,7 @@ const ColorButton = withStyles((theme) => ({
 
 const handleScroll = () => {
   window.scroll({
-    top: 750,
+    top: 600,
     left: 0,
     behavior: "smooth",
   });
