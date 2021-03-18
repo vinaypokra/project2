@@ -70,14 +70,22 @@ class Homeworkout extends Component {
           direction="column"
         >
           <Grid item>
-            <video width="100%" controls={videoPlaying} ref="vidRef">
+            <iframe
+              width="250"
+              height="250"
+              src="https://www.youtube.com/embed/FLXOHwf32K8"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            {/* <video width="100%" controls={videoPlaying} ref="vidRef">
               <source
                 src={"./vid/Final_KOL_Diabetes_withAudio.mp4"}
                 type="video/mp4"
               />
               Your browser does not support HTML5 video.
-            </video>
-            {!videoPlaying && (
+            </video> */}
+            {/* {!videoPlaying && (
               <Grid
                 item
                 container
@@ -109,7 +117,7 @@ class Homeworkout extends Component {
                   }}
                 />
               </Grid>
-            )}
+            )} */}
           </Grid>
         </Grid>
       </Grid>
