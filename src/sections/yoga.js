@@ -12,7 +12,6 @@ class Yoga extends Component {
         style={{
           ...Styles.fullHt,
           ...Styles.highZ,
-          ...Styles.greyBG,
           ...Styles.padding5,
         }}
         direction="column"
@@ -24,9 +23,8 @@ class Yoga extends Component {
           item
           container
           style={{
-            ...Styles.blackBG,
+            ...Styles.blueBG,
             ...Styles.padding10,
-            ...Styles.blackBG,
             ...Styles.feildRadius,
           }}
           alignItems="flex-start"
@@ -38,7 +36,7 @@ class Yoga extends Component {
             style={{ ...Styles.colorWhite, marginBottom: Styles.spacing(3) }}
           >
             {customTxt.yogaPageTxt.mainHeading[0]}
-            <span style={Styles.colorPrimary}>
+            <span style={Styles.colorYellow}>
               {customTxt.yogaPageTxt.mainHeading[1]}{" "}
             </span>
             {customTxt.yogaPageTxt.mainHeading[2]}
@@ -51,7 +49,7 @@ class Yoga extends Component {
               {customTxt.yogaPageTxt.contentList.map((val) => {
                 return (
                   <>
-                    <li>{val}</li>
+                    <li style={Styles.blueBG}>{val}</li>
                   </>
                 );
               })}

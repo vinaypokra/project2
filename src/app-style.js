@@ -7,12 +7,13 @@ let docHt = document.documentElement.clientHeight;
 
 const ColorButton = withStyles((theme) => ({
   root: {
-    color: theme.palette.getContrastText(colors.primary),
-    backgroundColor: colors.primary,
-    border: `1px solid ${colors.primary}`,
+    color: colors.blue,
+    backgroundColor: colors.yellow,
+    border: `1px solid ${colors.yellow}`,
     "&:hover": {
       backgroundColor: colors.transparent,
-      border: `1px solid white`,
+      border: `1px solid ${colors.yellow}`,
+      color: colors.yellow,
     },
   },
 }))(Button);
@@ -40,8 +41,14 @@ export default {
   colorPrimary: {
     color: colors.primary,
   },
+  colorYellow: {
+    color: colors.yellow,
+  },
   colorGrey: {
     color: colors.grey,
+  },
+  colorBlack: {
+    color: "black",
   },
   colorTransparent: {
     background: colors.transparent,
@@ -51,6 +58,12 @@ export default {
   },
   greyBG: {
     background: "#111",
+  },
+  blueBG: {
+    background: "#3e4e6d",
+  },
+  whiteBG: {
+    background: "#fff",
   },
   bgImg: {
     position: "absolute",
@@ -117,7 +130,7 @@ export default {
   },
   fullHt: {
     minHeight: `${docHt}px`,
-    background: "#111",
+    background: "#fff",
   },
   fullHtNoBG: { height: `${docHt}px` },
   highZ: {
@@ -135,12 +148,12 @@ export default {
     top: 0,
     left: 0,
     padding: "20px",
-    background: "rgba(0,0,0,.5)",
+    background: "rgb(100 116 166 / 44%)",
     zIndex: 20000,
   },
   footer: {
     padding: "0.3rem",
-    background: "#000",
+    background: "#fff",
     textAlign: "center",
     position: "fixed",
     bottom: "0",

@@ -18,17 +18,19 @@ class Banner extends Component {
           style={{
             ...Styles.banner,
             ...Styles.padding5,
-            ...Styles.translucentContainer,
+            background: `linear-gradient(0deg, rgba(0,0,0,0.3981967787114846) 21%, rgba(0,0,0,0.4) 66%), url('./img/Website_Image.jpg')`,
+            backgroundPosition: "left",
+            backgroundSize: "cover",
           }}
           alignItems="center"
           justify="center"
           direction="column"
           className="fixed"
         >
-          <PreloadImage
+          {/* <PreloadImage
             src={`${retrievePathMobile()}banner.jpg`}
             style={Styles.bgImg}
-          />
+          /> */}
           <Grid
             id="homePageHeading"
             item
@@ -56,9 +58,8 @@ class Banner extends Component {
           justify="center"
           className="top"
           style={{
-            ...Styles.padding10,
+            ...Styles.padding5,
             ...Styles.highZ,
-            ...Styles.greyBG,
             ...Styles.fullHt,
             ...Styles.relative,
           }}
@@ -67,18 +68,18 @@ class Banner extends Component {
             item
             container
             style={{
-              ...Styles.blackBG,
+              ...Styles.blueBG,
               ...Styles.padding5,
               ...Styles.feildRadius,
             }}
           >
             <Grid item>
               <Typography style={{ ...Styles.colorWhite }} variant="h5">
-                <span style={{ ...Styles.colorPrimary }}>Sign up with us </span>
+                <span style={{ ...Styles.colorYellow }}>Sign up with us </span>
                 to manage your
-                <span style={{ ...Styles.colorPrimary }}> Diabetes</span> better
+                <span style={{ ...Styles.colorYellow }}> Diabetes</span> better
                 & take a step towards a
-                <span style={{ ...Styles.colorPrimary }}> Better Life</span> for
+                <span style={{ ...Styles.colorYellow }}> Better Life</span> for
                 <span style={{ fontWeight: "bold" }}> free</span>
               </Typography>
               <hr />

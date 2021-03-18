@@ -18,7 +18,7 @@ class Homeworkout extends Component {
       <Grid
         container
         item
-        style={{ ...Styles.highZ, ...Styles.greyBG, ...Styles.padding10 }}
+        style={{ ...Styles.highZ, ...Styles.whiteBG, ...Styles.padding5 }}
         direction="column"
         alignItems="center"
         justify="space-evenly"
@@ -28,8 +28,8 @@ class Homeworkout extends Component {
           item
           container
           style={{
-            ...Styles.blackBG,
-            ...Styles.padding5,
+            ...Styles.blueBG,
+            ...Styles.padding10,
             ...Styles.marginBottom,
             ...Styles.feildRadius,
           }}
@@ -42,7 +42,7 @@ class Homeworkout extends Component {
             style={{ ...Styles.colorWhite, marginBottom: Styles.spacing(3) }}
           >
             {customTxt.homeworkoutPageTxt.mainHeading[0]}
-            <span style={Styles.colorPrimary}>
+            <span style={Styles.colorYellow}>
               {customTxt.homeworkoutPageTxt.mainHeading[1]}
             </span>
             {customTxt.homeworkoutPageTxt.mainHeading[2]}
@@ -70,8 +70,11 @@ class Homeworkout extends Component {
           direction="column"
         >
           <Grid item>
-            <video width="300" controls={videoPlaying} ref="vidRef">
-              <source src={`${retrievePath()}homewo.mp4`} type="video/mp4" />
+            <video width="100%" controls={videoPlaying} ref="vidRef">
+              <source
+                src={"./vid/Final_KOL_Diabetes_withAudio.mp4"}
+                type="video/mp4"
+              />
               Your browser does not support HTML5 video.
             </video>
             {!videoPlaying && (
@@ -94,7 +97,7 @@ class Homeworkout extends Component {
                 }}
               >
                 <PreloadImage
-                  src={`${retrievePath()}videoframe.jpg`}
+                  src={"./img/Video_Thumbail.jpg"}
                   alt="Start your day with meditation or yoga"
                   style={{
                     position: "absolute",

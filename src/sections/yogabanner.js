@@ -28,7 +28,7 @@ class Yogabanner extends Component {
         >
           <Fade in={this.props.section02} timeout={1000}>
             <PreloadImage
-              src={`${retrievePathMobile()}yoga.jpg`}
+              src={"./img/Why-our-health-care-plans-are-effective.jpg"}
               alt="Start your day with meditation or yoga"
               style={{ width: "90%", margin: "0 auto" }}
             />

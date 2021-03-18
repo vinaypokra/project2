@@ -12,24 +12,24 @@ class GetStarted extends Component {
         item
         container
         direction="column"
-        style={{ ...Styles.padding5, ...Styles.greyBG, ...Styles.highZ }}
+        style={{ ...Styles.padding5, ...Styles.blueBG, ...Styles.highZ }}
         alignItems="center"
         justify="center"
         className="top"
       >
         <Grid item>
           <Typography
-            variant="h2"
-            style={{ ...Styles.colorWhite, ...{ textAlign: "center" } }}
+            variant="h3"
+            style={{ ...Styles.colorYellow, ...{ textAlign: "center" } }}
           >
-            Join the community of like minded people
+            Prioritize your health today
           </Typography>
           <Typography
             variant="subtitle1"
-            style={{ color: colors.grey, textAlign: "center" }}
+            style={{ ...Styles.colorWhite, textAlign: "center" }}
           >
-            ... and unlock a secret, no-equipment home-workout absolutely free
-            of cost
+            Sign up with us to manage your diabetes better & take a step towards
+            a better life.
           </Typography>
           <hr />
         </Grid>

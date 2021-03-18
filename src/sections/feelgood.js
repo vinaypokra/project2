@@ -13,9 +13,9 @@ class Feelgood extends Component {
         style={{
           ...Styles.section01,
           ...Styles.highZ,
-          ...Styles.greyBG,
-          ...Styles.padding5,
-          ...Styles.fullHt,
+          ...Styles.blueBG,
+          padding: "25% 5%",
+          ...Styles.fullHtNoBG,
         }}
         className="top"
       >
@@ -23,8 +23,8 @@ class Feelgood extends Component {
           item
           container
           style={{
-            ...Styles.blackBG,
-            ...Styles.padding5,
+            ...Styles.whiteBG,
+            ...Styles.padding10,
             ...Styles.feildRadius,
           }}
           alignItems="center"
@@ -34,7 +34,7 @@ class Feelgood extends Component {
           <Grid item>
             <Typography
               variant="h3"
-              style={{ ...Styles.leftTxt, marginBottom: Styles.spacing(3) }}
+              style={{ ...Styles.colorBlack, marginBottom: Styles.spacing(3) }}
             >
               {customTxt.feelgoodPageTxt.mainHeading[0]}
               <span style={Styles.colorPrimary}>
