@@ -70,7 +70,6 @@ class Banner extends Component {
             container
             style={{
               ...Styles.translucentContainer,
-              ...Styles.padding5,
               ...Styles.feildRadius,
             }}
           >
