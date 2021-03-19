@@ -21,7 +21,7 @@ class Publicreviews extends Component {
         justify="center"
         className="top"
       >
-        <Grid item style={{ ...Styles.padding5, ...Styles.marginBottom }}>
+        <Grid item style={{ ...Styles.marginBottom }}>
           <Typography
             variant="h2"
             style={{ ...Styles.colorYellow, ...Styles.centerTxt }}

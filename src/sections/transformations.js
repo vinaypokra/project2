@@ -20,7 +20,7 @@ class Transformations extends Component {
         justify="center"
         className="top"
       >
-        <Grid item style={{ ...Styles.padding5, ...Styles.whiteBG }}>
+        <Grid item style={{ ...Styles.whiteBG }}>
           <Typography variant="h2" style={{ ...Styles.centerTxt }}>
             More than <span style={Styles.colorPrimary}>20000</span> people have
             learned <span style={Styles.colorPrimary}>a new way of life</span>{" "}
