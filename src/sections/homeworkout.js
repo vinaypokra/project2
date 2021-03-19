@@ -18,7 +18,11 @@ class Homeworkout extends Component {
       <Grid
         container
         item
-        style={{ ...Styles.highZ, ...Styles.whiteBG, ...Styles.padding5 }}
+        style={{
+          ...Styles.highZ,
+          ...Styles.whiteBG,
+          padding: "20% 5%",
+        }}
         direction="column"
         alignItems="center"
         justify="space-evenly"

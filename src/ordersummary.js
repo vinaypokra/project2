@@ -107,6 +107,7 @@ class Ordersummary extends Component {
         style={{ height: docHt() }}
         alignItems="center"
         justify="center"
+        style={Styles.blueBG}
       >
         {orderStatus === "waiting" && (
           <Grid
@@ -217,7 +218,7 @@ class Ordersummary extends Component {
             style={{
               ...Styles.colorWhite,
               ...Styles.marginBottom,
-              ...Styles.blackBG,
+              ...Styles.blueBG,
             }}
             alignItems="flex-end"
             justify="center"

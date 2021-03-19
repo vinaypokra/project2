@@ -180,7 +180,7 @@ class ReferralForm extends React.Component {
             alignItems="center"
             spacing={2}
           >
-            <Typography
+            {/* <Typography
               variant="h4"
               style={{
                 marginTop: Styles.spacing(5),
@@ -193,7 +193,7 @@ class ReferralForm extends React.Component {
               and
               <span style={{ ...Styles.colorPrimary }}> Rewards points </span>
               by referring more people
-            </Typography>
+            </Typography> */}
             <form onSubmit={(e) => this.handleSubmit(e)}>
               {this.state.inputFeildRows.map((inputRow, row) => (
                 <Grid item container direction="column" key={row} spacing={2}>

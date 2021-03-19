@@ -10,9 +10,9 @@ class Yoga extends Component {
         container
         item
         style={{
-          ...Styles.fullHt,
+          ...Styles.whiteBG,
           ...Styles.highZ,
-          ...Styles.padding5,
+          padding: "20% 5%",
         }}
         direction="column"
         alignItems="center"

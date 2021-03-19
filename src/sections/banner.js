@@ -37,6 +37,7 @@ class Banner extends Component {
             container
             alignItems="center"
             justify="center"
+            style={{ ...Styles.translucentContainer }}
           >
             <Typography variant="h1" style={{ ...Styles.colorWhite }}>
               {customTxt.bannerPageTxt.mainHeading}
@@ -58,7 +59,7 @@ class Banner extends Component {
           justify="center"
           className="top"
           style={{
-            ...Styles.padding5,
+            padding: "20% 5%",
             ...Styles.highZ,
             ...Styles.fullHt,
             ...Styles.relative,
@@ -68,7 +69,7 @@ class Banner extends Component {
             item
             container
             style={{
-              ...Styles.blueBG,
+              ...Styles.translucentContainer,
               ...Styles.padding5,
               ...Styles.feildRadius,
             }}
@@ -79,8 +80,7 @@ class Banner extends Component {
                 to manage your
                 <span style={{ ...Styles.colorYellow }}> Diabetes</span> better
                 & take a step towards a
-                <span style={{ ...Styles.colorYellow }}> Better Life</span> for
-                <span style={{ fontWeight: "bold" }}> free</span>
+                <span style={{ ...Styles.colorYellow }}> Better Life</span>
               </Typography>
               <hr />
             </Grid>

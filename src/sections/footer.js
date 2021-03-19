@@ -8,7 +8,7 @@ class Footer extends Component {
     return (
       <Grid item style={{ ...Styles.footer, ...Styles.highZ }}>
         <Typography variant="subtitle1" style={{ ...Styles.footerfont }}>
-          © GSG Fitness Pvt Ltd, 2020. All rights reserved
+          © GSG Fitness Pvt Ltd, {new Date().getFullYear()}. All rights reserved
         </Typography>
       </Grid>
     );

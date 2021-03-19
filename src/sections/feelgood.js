@@ -14,8 +14,7 @@ class Feelgood extends Component {
           ...Styles.section01,
           ...Styles.highZ,
           ...Styles.blueBG,
-          padding: "25% 5%",
-          ...Styles.fullHtNoBG,
+          padding: "20% 5%",
         }}
         className="top"
       >

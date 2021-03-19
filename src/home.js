@@ -12,7 +12,8 @@ import Homefood from "./sections/homefood";
 import Coachingplan from "./sections/coachingplan";
 import Fun from "./sections/fun";
 import { docHt, set } from "./services";
-
+import Transformations from "./sections/transformations";
+import Publicreviews from "./sections/publicreviews";
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -70,6 +71,8 @@ class Home extends Component {
         {/* <Diet showDetails={()=>{this.showDetails()}}/>
             <Homefood/>
             <Fun/> */}
+        <Transformations />
+        <Publicreviews />
         <GetStarted />
         <Coachingplan
           coachingDetails={coachingDetails}

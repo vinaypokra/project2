@@ -157,7 +157,11 @@ class Package extends Component {
     return (
       <Grid
         container
-        style={{ minHeight: `${docHt() - 100}px`, paddingTop: "70px" }}
+        style={{
+          minHeight: `${docHt() - 100}px`,
+          paddingTop: "70px",
+          ...Styles.blueBG,
+        }}
         direction="column"
         alignItems="center"
         justify="space-evenly"
