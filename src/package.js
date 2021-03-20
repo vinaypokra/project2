@@ -219,7 +219,7 @@ class Package extends Component {
                 justify="space-evenly"
                 style={{
                   ...Styles.marginTop,
-                  ...Styles.greyBG,
+                  ...Styles.blueBG,
                   ...Styles.padding5,
                 }}
                 direction="column"
@@ -233,7 +233,7 @@ class Package extends Component {
                           item
                           style={{
                             ...Styles.marginBottom,
-                            ...Styles.blackBG,
+                            ...Styles.blueBG,
                             ...Styles.padding5,
                           }}
                           key={index}
